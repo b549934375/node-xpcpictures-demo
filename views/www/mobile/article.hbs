@@ -1,0 +1,66 @@
+<!-- html部分 -->
+<div class="container">
+    {{!-- <div class="header-wrap">
+      <div class="header-con">
+        <a href="index"><img class="logo-img" src="//cs.vmovier.com/Uploads/Activity/2017-03-10/58c254b1741d9.png"></a>
+        <ul class="nav-list">
+          <li class="active"><a href="javascript:;">首页{{moduleSrc}}</a></li>
+          <li><a href="article">作品</a></li>
+          <li><a href="creator">创作人</a></li>
+          <li><a href="investment">投资</a></li>
+          <li><a href="contact">联系我们</a></li>
+        </ul>
+      </div>
+    </div> --}}
+    <div id="home" class="home">
+      <ul id="home_imglist_ul" class="home_imglist_ul">
+        
+        <li class="">
+          <img class="solideImg" src="https://cs.vmovier.com/Uploads/Activity/2017-03-28/58da167d79b2c.jpg">
+          <div class="banner-cover">
+            <div class="slogan-wrap content_active">
+              <p class="slogan">我们的作品</p>
+              <p class="intro">2016年总计出品、发行百余部作品，发行项目总点击量高达15亿，打造了包括《四平青年之浩哥大战古惑仔》《错了性别，不错爱》《痞子兵王》《不可抗力》等诸多爆款项目。</p>
+            </div>
+          </div>
+        </li>
+        
+      </ul>
+      
+    </div>
+    <div class="main">
+      <div class="service-wrap">
+        <ul class="data-list clearfix data-article">
+          <li>
+            <p class="data-detail green"><i class="numincrease" data-startnum="3" data-endnum="15">06</i><span>亿+</span></p>
+            <p class="data-title">全网视频播放量</p>
+          </li>
+          <li>
+            <p class="data-detail blue"><i class="numincrease" data-startnum="67" data-endnum="117">99</i><span>部</span></p>
+            <p class="data-title">出品发行作品</p>
+          </li>
+          <li>
+            <p class="data-detail red"><i class="numincrease" data-startnum="12"  data-endnum="40">27</i><span>万</span></p>
+            <p class="data-title">影视制作人</p>
+          </li>
+        </ul>
+      </div>
+      <div class="video-wrap">
+        <ul class="video-list">
+          {{>picture_m}}
+        </ul>
+      </div>
+    </div>
+  </div>
+
+<!-- js部分 -->
+{{#section 'js-file'}}
+<script type="text/javascript" src="/public/js/parallax.js" ></script>
+<script type="text/javascript" src="/public/js/increasenum.js"></script>
+<script>
+  // $('.parallax').parallax().css('height', '400px');
+  // var winW = $(window).width();
+  // $("#home").css("height", winW * 1200 / 2560);
+</script>
+
+{{/section}}

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="renderer" content="webkit">
+    <title>{{title}}</title>
+    <!-- <link rel="icon" href="/public/lib/img/web/favicon.png" type="image/gif"> -->
+    <meta name="keywords" content="网络电影，网络大电影，网大，新媒体电影，出品发行，营销，投资，网络剧，互联网电影，影视娱乐内容，投资出品，创作人">
+    <meta name="description" content="新片场影业是新片场集团旗下以制作、投资、发行、营销、艺人经纪业务为主的影视娱乐公司，主要出品和发行网络电影、网络剧、院线电影等内容，依托于新片场创作人社区平台从而发掘优秀年轻创作人，建立了以制片人为核心的项目开发团队和培养机制，以及培养青年导演为核心的“新片场导演学院”为新一代电影导演做人才储备">
+    <meta name="robots" content="all">
+    <link rel="stylesheet" href="{{#autoVer '/public/css/common.css' }}{{/autoVer}}">
+    {{{_sections.css-file}}}
+</head>
+<body>
+{{>header}}
+{{{body}}}
+{{>footer}}
+<div class="toolbar">
+	<div id="bdshare" class="bdshare_t bds_tools_25 get-codes-bdshare a-wrap" data="{'url':'{{shareconfig.url}}?source=qzone','text':'{{shareconfig.qzoneText}}',desc':'{{shareconfig.qzoneDesc}}','comment':''}">
+		<a class="bds_qzone" title="分享到QQ空间"></a>
+	</div>
+	<div class="bdsharebuttonbox a-wrap">
+		<a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a>
+	</div>
+	<div id="bdshare" class="bdshare_t bds_tools_25 get-codes-bdshare a-wrap" data="{'url':'{{shareconfig.url}}?source=weibo',text:'{{shareconfig.sinaText}}'}">
+		<a class="bds_tsina" title="分享到新浪微博"></a>
+	</div>
+	<div class="a-wrap">
+		<a id="backtop" title="返回顶部" href="javascript:void(0);" class="toolbar-item toolbar-item-top"></a>
+	</div>	
+</div> 
+
+<script type="text/javascript" src="/public/js/jquery.min.js"></script>
+<script type="text/javascript" src="{{#autoVer '/public/js/common.js' }}{{/autoVer}}"></script>
+<script>
+window._bd_share_config={"common":{"bdUrl": '{{shareconfig.url}}?source=weixin',"bdSnsKey":{'tsina':'2946023075','qzone':'535fbad38029b66bfa04e84969aeab1e','renren':'dba11045c994442bb28f88f0ccfb52d7'},"bdText": "{{shareconfig.bdText}}","bdMini":"2","bdPic": "{{shareconfig.bdPic}}","bdStyle":"1","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=86835285.js?cdnversion='+~(-new Date()/36e5)];
+</script>
+<script type="text/javascript" id="bdshare_js" data="type=tools" ></script>
+<script type="text/javascript" id="bdshell_js"></script>
+<script type="text/javascript">
+var bds_config = {'bdPic': "{{shareconfig.bdPic}}",'snsKey':{'tsina':'2946023075','qzone':'535fbad38029b66bfa04e84969aeab1e','renren':'dba11045c994442bb28f88f0ccfb52d7'}};
+document.getElementById("bdshell_js").src = "http://bdimg.share.baidu.com/static/js/shell_v2.js?cdnversion=" + Math.ceil(new Date()/3600000);
+	$("#backtop").on("click",function(){
+		$("html,body").animate({scrollTop:0},800);
+	});
+	checkPosition($(window).height());
+	$(window).on("scroll",function(){
+		checkPosition($(window).height());
+	});
+	function checkPosition(pos){
+		if($(window).scrollTop() > pos){
+			$("#backtop").fadeIn();
+		}else{
+			$("#backtop").fadeOut();
+		};
+		
+	};
+</script>
+<script>
+	var _hmt = _hmt || [];
+	(function() {
+	  var hm = document.createElement("script");
+	  hm.src = "//hm.baidu.com/hm.js?dfd9b1dd5fd1333a1c8e27ce6b5e60ce";
+	  var s = document.getElementsByTagName("script")[0]; 
+	  s.parentNode.insertBefore(hm, s);
+	})();
+</script>
+{{{_sections.js-file}}}
+</body>
+</html>
+

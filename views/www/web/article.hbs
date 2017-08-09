@@ -1,0 +1,95 @@
+<!-- html部分 -->
+{{>video}}
+<div class="container">
+    <div class="banner-wrap slideActive">
+      <img class="banner-img" src="http://cs.vmovier.com/Uploads/Activity/2017-03-28/58da1574d0cc6.jpg">
+      <div class="banner-cover">
+        <div class="slogan-wrap">
+          <p class="slogan">我们的作品</p>
+          <p class="intro">2016年总计出品、发行百余部作品，发行项目总点击量高达15亿，打造了包括《四平青年之浩哥大战古惑仔》<br>《错了性别，不错爱》《痞子兵王》《不可抗力》等诸多爆款项目。</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="main">
+      <div class="service-wrap">
+        <ul class="data-list clearfix" style="margin-top: 0;">
+          <li>
+            <p class="data-detail green"><i class="numincrease" data-startnum="3" data-endnum="15">06</i><span>亿+</span></p>
+            <p class="data-title">全网视频播放量</p>
+          </li>
+          <li>
+            <p class="data-detail blue"><i class="numincrease" data-startnum="67" data-endnum="117">99</i><span>部</span></p>
+            <p class="data-title">出品发行作品</p>
+          </li>
+          <li class="mr0">
+            <p class="data-detail red"><i class="numincrease" data-startnum="12"  data-endnum="40">27</i><span>万</span></p>
+            <p class="data-title">影视制作人</p>
+          </li>
+        </ul>
+      </div>
+      <div class="video-wrap">
+        <ul class="video-list">
+
+          {{>picture}}
+          {{!-- <li class="last-picture">
+            <div class="video-poster parallax" data-image="//cs.vmovier.com/Uploads/Magic/post/2017-02-24/58b026ed98277.jpg">
+              <div class="cover"></div>
+              <span class="btn"></span>
+            </div>
+          </li> --}}
+        </ul>
+      </div>
+    </div>
+  </div>
+
+{{#section 'js-file'}}
+<script type="text/javascript" src="/public/js/parallax.js" ></script>
+<script type="text/javascript" src="{{#autoVer '/public/js/increasenum.js' }}{{/autoVer}}"></script>
+<script>
+  $('.parallax').parallax().css('height', '400px');
+  // var page = 2;
+  // function ajax(scrollTop){
+  //   var arrAjax=[];
+  //   var listHeiht=$(".video-list").height();
+  //   var isSee=scrollTop + 1.5*screenHeight>=listHeiht + $(".video-list").offset().top ? true : false;
+   
+  //   if(isSee && onOff){
+  //     ajaxAction(true);
+  //   }
+  // }
+
+  // function scroll( fn ) {
+  //     var beforeScrollTop = document.body.scrollTop,
+  //         fn = fn || function() {};
+  //     window.addEventListener("scroll", function() {
+  //         var afterScrollTop = document.body.scrollTop,
+  //             delta = afterScrollTop - beforeScrollTop;
+  //         if( delta === 0 ) return false;
+  //         fn( delta > 0 ? true : false ,afterScrollTop);
+  //         beforeScrollTop = afterScrollTop;
+  //     }, false);
+  // }
+
+  // var screenHeight=$(window).height() < 600 ? 600 : $(window).height();
+  // var onOff=true;
+  // scroll(function(direction,ScrollTop) { 
+  //   // ajax(ScrollTop);
+  // }); 
+
+  // function ajaxAction(async){
+  //   onOff = false;
+  //   $.get("getPicture",{page:page},function(data){
+  //     console.log(data);
+  //     if(data != null){
+  //       onOff = true;
+  //       page++;
+  //       $(data).insertBefore(".last-picture");
+  //       $('.parallax').parallax().css('height', '400px');
+  //     }
+  //   })
+  // }  
+  
+</script>
+
+{{/section}}

@@ -1,0 +1,35 @@
+{{#each data}}
+<li>
+    <div class="video-poster parallax" data-videosrc="{{pre_link_video}}">
+        <img src="{{pictures_banner}}@1500w_840h_1e_1c" alt="">
+        <div class="cover"></div>
+        <span class="btn {{#if channel}}{{bgColor}}{{/if}}"></span>
+    </div>
+    <div class="video-intro clearfix">
+        {{#if channel}}
+        <div class="bg-bar {{#if channel}}{{bgColor}}{{/if}}">{{channel}}独播</div>
+        {{/if}}
+        <div class="left">
+        <p class="video-title">{{title}}</p>
+        <div class="white-bar"></div>
+        <div class="credits-list">
+            导演：<span class="director">{{director}}</span>&nbsp;&nbsp;&nbsp;
+            编剧：<span class="screenwriter">{{screenwriter}}</span>&nbsp;&nbsp;&nbsp;
+            演员：<span class="playactor">{{playactor}}</span>&nbsp;&nbsp;&nbsp;
+            类型：<span class="type">{{tag_type}}</span>&nbsp;&nbsp;&nbsp;
+            上线时间：<span class="uptime">{{publish_time}}</span>
+        </div>
+        <p class="video-detail">{{description}}</p>
+    </div>
+    {{#if point_array}}
+    <div class="right">
+        <p class="video-title">成绩</p>
+        <div class="white-bar"></div>
+        {{#each point_array}}
+        <p class="video-detail">{{point_0}}{{#if point_1}}<span>{{point_1}}</span>{{/if}}</p>
+        {{/each}}
+      </div>
+    </div>
+    {{/if}}
+</li>
+{{/each}}

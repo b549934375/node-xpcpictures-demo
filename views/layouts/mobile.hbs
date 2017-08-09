@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <meta content="telephone=no" name="format-detection" />
+    <meta name="format-detection" content="telephone=yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta property="qc:admins" content="24517261765210166375" />
+    <meta name="keywords" content="网络电影，网络大电影，网大，新媒体电影，出品发行，营销，投资，网络剧，互联网电影，影视娱乐内容，投资出品，创作人">
+    <meta name="description" content="新片场影业是新片场集团旗下以制作、投资、发行、营销、艺人经纪业务为主的影视娱乐公司，主要出品和发行网络电影、网络剧、院线电影等内容，依托于新片场创作人社区平台从而发掘优秀年轻创作人，建立了以制片人为核心的项目开发团队和培养机制，以及培养青年导演为核心的“新片场导演学院”为新一代电影导演做人才储备">
+    <meta name="robots" content="all">
+    <title>{{title}}</title>
+    <link rel="stylesheet" href="{{#autoVer '/public/css/common_mobile.css' }}{{/autoVer}}">
+    <link rel="stylesheet" href="{{#autoVer '/public/css/loading.css' }}{{/autoVer}}">
+    {{{_sections.css-file}}}
+</head>
+<body>
+  <div class="loading"><div class="loader"><div class="loader-inner ball-beat"><svg xmlns="http://www.w3.org/2000/svg" width="48px" height="48px" viewBox="0 0 48 48"><circle cx="6" cy="24" r="6px" class="circle"  fill="#000"/><circle cx="24" cy="24" r="6px" class="circle"  fill="#000"/><circle cx="42" cy="24" r="6px" class="circle"  fill="#000"/></svg></div></div></div>
+  {{>header_m}}
+  {{{body}}}
+  {{>footer_m}}
+<script type="text/javascript" src="/public/js/jquery.min.js"></script>
+<script type="text/javascript" src="/public/js/fastclick.js"></script>
+<script type="text/javascript" src="{{#autoVer '/public/js/common_mobile.js' }}{{/autoVer}}"></script>
+<script type="text/javascript" src="/public/js/weixin-sdk.js"></script>
+<script>
+    (function(){
+        var html = document.documentElement;
+        var windowWidth = html.clientWidth;
+        html.style.fontSize = (windowWidth >= 600 ? 375 : windowWidth) / 375 * 18 + 'px';
+    })();
+    
+    var navListH = $(".nav-list").outerHeight(true) + $(".top-bar").outerHeight(true),
+        slideFlag = true,
+        headerBar = $(".header-bar"),
+        menuBar = $(".menu .menu-bar"),
+        navWrap = $(".nav-wrap"),
+        menuClose =  $(".menu .close");
+        
+    $(".menu").on("click", function() {
+        if (slideFlag) {
+            if (headerBar.hasClass("bg-color")) {
+                headerBar.removeClass("bg-color");
+            }
+            menuBar.hide();
+            menuClose.show();
+            navWrap.css("height", navListH);
+        } else {
+            if ($(window).scrollTop() > 0) {
+                headerBar.addClass("bg-color");
+            }
+            menuBar.show();
+            menuClose.hide();
+            navWrap.css("height", 0);
+        }
+        slideFlag = !slideFlag;
+        
+    });
+    
+    weixinShare({
+        title:"新片场影业",
+        desc:"新片场影业是新片场集团旗下以制作、投资、发行、营销、艺人经纪业务为主的影视娱乐公司，主要出品和发行网络电影、网络剧、院线电影等内容。",
+        img:"http://cs.vmoiver.com/Uploads/Activity/2017-03-14/58c7f6aacabb9.jpg",
+        link:location.href
+    })
+    function weixinShare(obj){
+          $.getJSON('http://magicapi.vmovier.com/index/getRefererWeixinShareConfig', function(re) {
+            if(re.status == 0){
+                  wx.config({
+                          debug: false, // 开启调试模式,调用的所有api的返回值会在客户端alert出来，若要查看传入的参数，可以在pc端打开，参数信息会通过log打出，仅在pc端时才会打印。
+                          appId: re.data.appId, // 必填，公众号的唯一标识
+                          timestamp: re.data.timestamp, // 必填，生成签名的时间戳
+                          nonceStr: re.data.nonceStr, // 必填，生成签名的随机串
+                          signature: re.data.signature, // 必填，签名，见附录1
+                          jsApiList: ['onMenuShareTimeline','onMenuShareAppMessage','launch3rdApp','getInstallState'] //  必填，需要使用的JS接口列表，所有JS接口列表见附录2
+                      });
+                  wx.ready(function(){
+                      wx.onMenuShareTimeline({
+                          title: obj.title, // 分享标题
+                          link: obj.link, // 分享链接
+                          imgUrl: obj.img, // 分享图标
+                          success: function () { 
+                              // 用户确认分享后执行的回调函数
+                          },
+                          cancel: function () { 
+                              // 用户取消分享后执行的回调函数
+                          }
+                      });
+                      wx.onMenuShareAppMessage({
+                          title: obj.title, // 分享标题
+                          desc: obj.desc, // 分享描述
+                          link: obj.link, // 分享链接
+                          imgUrl: obj.img, // 分享图标
+                          type: '', // 分享类型,music、video或link，不填默认为link
+                          dataUrl: '', // 如果type是music或video，则要提供数据链接，默认为空
+                          success: function () { 
+                              // 用户确认分享后执行的回调函数
+                          },
+                          cancel: function () { 
+                              // 用户取消分享后执行的回调函数
+                          }
+                      });
+                  })
+              }
+          })
+      }
+</script>
+<script>
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?dfd9b1dd5fd1333a1c8e27ce6b5e60ce";
+      var s = document.getElementsByTagName("script")[0]; 
+      s.parentNode.insertBefore(hm, s);
+    })();
+</script>
+{{{_sections.js-file}}}
+</body>
+</html>

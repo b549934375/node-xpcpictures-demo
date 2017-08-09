@@ -1,0 +1,141 @@
+<!-- css部分 -->
+{{#section 'css-file'}}
+   
+    <link rel="stylesheet" type="text/css" href="/public/css/swiper.min.css">
+
+{{/section}}
+
+<!-- html部分 -->
+<div class="container">
+    <div id="home" class="home">
+      <div class="swiper-container">
+        <ul id="home_imglist_ul" class="home_imglist_ul swiper-wrapper">
+            <li class="swiper-slide">
+            <img class="solideImg" src="https://cs.vmovier.com/Uploads/Activity/2017-03-28/58da165001f86.jpg">
+            <div class="banner-cover">
+              <div class="slogan-wrap content_show">
+                <p class="slogan">用你的作品打动世界</p>
+                <p class="intro">新片场影业是新片场集团旗下以制作、投资、发行、营销、艺人经纪业务为主的影视娱乐公司，主要出品和发行网络电影、网络剧、院线电影等内容。</p>
+              </div>
+            </div>
+          </li>
+            
+          {{!-- <li class="slideItem swiper-slide">
+            <img class="solideImg" src="//cs.vmovier.com/Uploads/Activity/2017-03-09/58c0bf5771c35.jpg@750w_960h_1e_1c">
+            <div class="banner-cover">
+              <div class="slogan-wrap content_hidden">
+                <p class="slogan">内容出品</p>
+                <p class="intro">内容出品是新片场影业在培育青年创作人才以及为观众输送高品质影视内容的重要业务板块，基于创作人社区的人才筛选机制为内容的生产提供了源源不断的新生代创作力量，出品制作了如《痞子兵王》《大唐狄人杰之东瀛邪术》《四平青年之浩哥大战古惑仔》《不可抗力》《男狐聊斋》《白雾谜岸》《那女孩真帅》《总裁在上》等上百部优秀作品</p>
+              </div>
+            </div>
+          </li>
+          
+          
+          <li class="slideItem swiper-slide">
+            <img class="solideImg" src="//cs.vmovier.com/Uploads/Activity/2017-03-10/58c279adf0846.jpg@750w_960h_1e_1c">
+            <div class="banner-cover">
+              <div class="slogan-wrap content_hidden">
+                <p class="slogan">营销发行</p>
+                <p class="intro">营销发行是新片场影业关于内容发行、内容宣传的重要业务板块，目的是为了将内容直达目标受众。基于线上、线下的宣传渠道，通过精准分析受众人群的相关数据，形成个性化订制的营销策略。</p>
+              </div>
+            </div>
+          </li>
+          
+          
+          <li class="slideItem swiper-slide">
+            <img class="solideImg" src="//cs.vmovier.com/Uploads/Activity/2017-03-10/58c279c5ebe9e.jpg@750w_960h_1e_1c">
+            <div class="banner-cover">
+              <div class="slogan-wrap content_hidden">
+                <p class="slogan">影视投资</p>
+                <p class="intro">影视投资是新片场影业携手多家娱乐资本成立的影视投资基金，旨在为市场优秀作品提供资金保障，促进行业的健康发展。</p>
+              </div>
+            </div>
+            
+          </li> --}}
+          
+          
+        </ul>
+        <div class="swiper-pagination swiper-pagination-clickable swiper-pagination-bullets comment-change"></div>
+      </div>
+      
+    </div>
+    <div class="main">
+      <div class="service-wrap">
+        <ul class="service-list clearfix">
+          <li>
+            <p class="service-title">内容出品</p>
+            <div class="colorful-bar"></div>
+            <p class="service-intro">专业制作班底，开发精品内容</p>
+          </li>
+          <li>
+            <p class="service-title">营销发行</p>
+            <div class="colorful-bar blue"></div>
+            <p class="service-intro">一站式内容营销，社会化媒体资源联动</p>
+          </li>
+          <li>
+            <p class="service-title">影视投资</p>
+            <div class="colorful-bar green"></div>
+            <p class="service-intro">新片场基金扶持更多优质影视内容</p>
+          </li>
+          <li class="mr0">
+            <p class="service-title">艺人经纪</p>
+            <div class="colorful-bar pink"></div>
+            <p class="service-intro">打造内容娱乐消费新时代，培育影坛新力量</p>
+          </li>
+        </ul>
+        <ul class="data-list clearfix">
+          <li>
+            <p class="data-detail green"><i class="numincrease" data-startnum="3" data-endnum="15">06</i><span>亿+</span></p>
+            <p class="data-title">全网视频播放量</p>
+          </li>
+          <li>
+            <p class="data-detail blue"><i class="numincrease" data-startnum="89" data-endnum="117">89</i><span>部</span></p>
+            <p class="data-title">出品发行作品</p>
+          </li>
+          <li>
+            <p class="data-detail red"><i class="numincrease" data-startnum="12"  data-endnum="40">27</i><span>万</span></p>
+            <p class="data-title">影视制作人</p>
+          </li>
+        </ul>
+      </div>
+      <div class="video-wrap">
+        <div class="top-bar-wrap">
+          <div class="top-bar">
+            <span class="top-title">我们的作品</span>
+            <a class="top-more" href="article">查看更多 ></a>
+          </div>
+        </div>
+        <ul class="video-list">
+          {{>picture_m}}
+          <li class="mix">
+            <div class="video-poster parallax" data-videosrc="http://7ryl2t.com2.z0.glb.qiniucdn.com/58c79f94a5345.mp4">
+              <img src="//cs.vmovier.com/Uploads/Activity/2017-03-16/58c9fdee80581.jpg" alt="">
+              <div class="cover"></div>
+              <div class="center">2016新片场影业作品混剪</div>
+              <span class="btn"></span>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+<!-- js部分 -->
+{{#section 'js-file'}}
+
+<script src="/public/js/swiper-3.3.1.min.js" type="text/javascript"></script>
+<script type="text/javascript" src="{{#autoVer '/public/js/increasenum.js' }}{{/autoVer}}"></script>
+
+{{!-- <script type="text/javascript" src="/public/js/web/slidebanner.js"></script> --}}
+<script>
+  // var swiper = new Swiper('.swiper-container',{
+  //     pagination: '.swiper-pagination',
+  //         paginationClickable: true,
+  //         loop : true,
+  //         loopAdditionalSlides : 1,
+  //         autoplay : 3000,
+  //         autoplayDisableOnInteraction : false
+  //   });    
+</script>
+
+{{/section}}
