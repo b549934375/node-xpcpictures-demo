@@ -1,6 +1,6 @@
  #demo 的运行命令
 
- # 首先安装依赖
+<h5>首先安装依赖</h5>
 npm install
 
 <h5>开发模式</h5>
@@ -11,5 +11,5 @@ npm run start
 <h6>打包</h6>
 npm run build
 
-<h6>项目线上链接：</h6><a href="http://film.xinpianchang.com/">http://film.xinpianchang.com/</a>
+<h6>项目线上链接：</h6><a href="http://film.xinpianchang.com/" target="_blank">http://film.xinpianchang.com/</a>
 
